@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>GESTION ASSOCIATION - ktierB</title>
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
+      // This script takes the current url and converts the path and query
+      // string into just a query string, and then redirects the browser
+      // to the new url with only a query string and hash fragment,
+      // e.g. https://username.github.io/repo-name/one/two?a=b&c=d#qwe, becomes
+      // https://username.github.io/repo-name/?p=/one/two&q=a=b~and~c=d#qwe
+      var l = window.location;
+      var q = {};
+      var p = l.pathname.substring(1); // remove leading slash
+      if (p) q.p = p;
+      if (l.search) q.q = l.search.substring(1); // remove leading '?'
+      var s = Object.keys(q).map(function(k) { return encodeURIComponent(k) + '=' + encodeURIComponent(q[k]); }).join('&');
+      var h = l.hash.substring(1); // remove leading '#'
+      var u = '/' + (s ? '?' + s : '') + (h ? '#' + h : '');
+      window.location.replace(u);
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
