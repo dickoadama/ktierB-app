@@ -1,0 +1,305 @@
+.contributions-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.contributions-container h2 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contributions-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.summary-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.summary-card:hover {
+  transform: translateY(-5px);
+}
+
+.summary-card h3 {
+  margin: 0 0 1rem 0;
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+.summary-card .amount {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.total-paid .amount {
+  color: #2ecc71;
+}
+
+.total-due .amount {
+  color: #e74c3c;
+}
+
+.balance .amount {
+  color: #3498db;
+}
+
+.contributions-list {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+
+.contributions-list h3 {
+  color: #2c3e50;
+  margin-top: 0;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.contributions-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.contributions-table th {
+  background-color: #f8f9fa;
+  text-align: left;
+  padding: 0.8rem;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.contributions-table td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.contributions-table tr:hover {
+  background-color: #f8f9fa;
+}
+
+.status-payé {
+  background-color: #f0fff4;
+}
+
+.status-en-attente {
+  background-color: #fff8f0;
+}
+
+.status-badge {
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.status-badge.payé {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.status-badge.en-attente {
+  background-color: #f39c12;
+  color: white;
+}
+
+.pay-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.pay-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.payment-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.payment-form {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: slideInUp 0.5s ease-out;
+}
+
+.payment-form h3 {
+  color: #2c3e50;
+  margin-top: 0;
+  text-align: center;
+}
+
+.payment-form p {
+  text-align: center;
+  margin: 0.5rem 0;
+  color: #7f8c8d;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.cancel-btn, .submit-btn {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancel-btn {
+  background-color: #95a5a6;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background-color: #7f8c8d;
+  transform: translateY(-2px);
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes slideInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Éléments flotnants spécifiques aux cotisations */
+.contribution-floating-element {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.1;
+  z-index: -1;
+  pointer-events: none;
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-icon-1 {
+  top: 8%;
+  left: 8%;
+  animation-delay: 0s;
+}
+
+.floating-icon-2 {
+  top: 25%;
+  right: 12%;
+  animation-delay: 1s;
+}
+
+.floating-icon-3 {
+  bottom: 18%;
+  left: 18%;
+  animation-delay: 2s;
+}
+
+@media (max-width: 768px) {
+  .contributions-container {
+    padding: 1rem;
+  }
+  
+  .contributions-summary {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .form-buttons {
+    flex-direction: column;
+  }
+  
+  .contribution-floating-element {
+    font-size: 1.5rem;
+  }
+}

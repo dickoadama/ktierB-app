@@ -1,0 +1,194 @@
+/* Bulles flottantes */
+.floating-bubble {
+  position: fixed;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.bubble-1 {
+  width: 150px;
+  height: 150px;
+  top: 10%;
+  left: 5%;
+  animation: float 8s ease-in-out infinite;
+}
+
+.bubble-2 {
+  width: 100px;
+  height: 100px;
+  top: 60%;
+  right: 10%;
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.bubble-3 {
+  width: 200px;
+  height: 200px;
+  bottom: 15%;
+  left: 15%;
+  animation: float 10s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.bubble-4 {
+  width: 80px;
+  height: 80px;
+  top: 30%;
+  right: 20%;
+  animation: float 7s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+/* Formes géométriques flottantes */
+.floating-shape {
+  position: fixed;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.1;
+}
+
+.shape-1 {
+  width: 120px;
+  height: 120px;
+  top: 20%;
+  right: 5%;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  animation: rotate 15s linear infinite, float 8s ease-in-out infinite;
+}
+
+.shape-2 {
+  width: 100px;
+  height: 100px;
+  bottom: 25%;
+  right: 15%;
+  background: linear-gradient(45deg, #3498db, #2ecc71);
+  border-radius: 20px;
+  animation: rotate 20s linear infinite reverse, float 10s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.shape-3 {
+  width: 150px;
+  height: 150px;
+  top: 40%;
+  left: 10%;
+  background: linear-gradient(45deg, #e74c3c, #f39c12);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  animation: rotate 12s linear infinite, float 9s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+/* Particules flottantes */
+.floating-particle {
+  position: fixed;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.particle-1 {
+  width: 10px;
+  height: 10px;
+  top: 15%;
+  left: 20%;
+  animation: float 5s ease-in-out infinite;
+}
+
+.particle-2 {
+  width: 6px;
+  height: 6px;
+  top: 70%;
+  right: 25%;
+  animation: float 7s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.particle-3 {
+  width: 8px;
+  height: 8px;
+  bottom: 20%;
+  left: 30%;
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.particle-4 {
+  width: 12px;
+  height: 12px;
+  top: 40%;
+  right: 35%;
+  animation: float 8s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+.particle-5 {
+  width: 7px;
+  height: 7px;
+  bottom: 30%;
+  right: 20%;
+  animation: float 9s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+/* Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px) rotate(5deg);
+  }
+  50% {
+    transform: translateY(10px) translateX(-15px) rotate(-5deg);
+  }
+  75% {
+    transform: translateY(-15px) translateX(-10px) rotate(3deg);
+  }
+  100% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .bubble-1, .bubble-3 {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .bubble-2, .bubble-4 {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .shape-1, .shape-3 {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .shape-2 {
+    width: 60px;
+    height: 60px;
+  }
+  
+  /* Hide some elements on mobile for better performance */
+  .bubble-4, .shape-3, .particle-4, .particle-5 {
+    display: none;
+  }
+  
+
+}

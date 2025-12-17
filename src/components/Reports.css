@@ -1,0 +1,333 @@
+.reports-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.reports-container h2 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.report-controls {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: end;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.control-group label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.control-group input,
+.control-group select {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.generate-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: fit-content;
+}
+
+.generate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.report-section {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.report-section h3 {
+  color: #2c3e50;
+  margin-top: 0;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.metric-card {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.metric-card h4 {
+  margin: 0 0 1rem 0;
+  color: #7f8c8d;
+}
+
+.metric-card .amount {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 0 0.5rem 0;
+}
+
+.income .amount {
+  color: #2ecc71;
+}
+
+.expenses .amount {
+  color: #e74c3c;
+}
+
+.profit .amount {
+  color: #3498db;
+}
+
+.members .amount {
+  color: #9b59b6;
+}
+
+.active .amount {
+  color: #1abc9c;
+}
+
+.renewal .amount {
+  color: #f39c12;
+}
+
+.events .amount {
+  color: #34495e;
+}
+
+.attendance .amount {
+  color: #d35400;
+}
+
+.participation .amount {
+  color: #8e44ad;
+}
+
+.trend {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+.trend.positive {
+  color: #2ecc71;
+}
+
+.trend.negative {
+  color: #e74c3c;
+}
+
+.breakdown {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1.5rem;
+}
+
+.breakdown h4 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.breakdown-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.breakdown-item:last-child {
+  border-bottom: none;
+}
+
+.chart-placeholder {
+  margin-top: 2rem;
+}
+
+.chart-placeholder h4 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.chart-area {
+  display: flex;
+  align-items: end;
+  height: 200px;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.chart-bar {
+  flex: 1;
+  background: linear-gradient(to top, #667eea, #764ba2);
+  border-radius: 4px 4px 0 0;
+  min-height: 20px;
+}
+
+.upcoming-events {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1.5rem;
+}
+
+.upcoming-events h4 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.upcoming-events ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.upcoming-events li {
+  margin-bottom: 0.5rem;
+  color: #7f8c8d;
+}
+
+.export-options {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.export-options h3 {
+  color: #2c3e50;
+  margin-top: 0;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.export-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.export-btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.export-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.export-btn.pdf {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.export-btn.excel {
+  background-color: #27ae60;
+  color: white;
+}
+
+.export-btn.csv {
+  background-color: #3498db;
+  color: white;
+}
+
+/* Éléments flotnants spécifiques aux rapports */
+.report-floating-element {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.1;
+  z-index: -1;
+  pointer-events: none;
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-icon-1 {
+  top: 12%;
+  left: 12%;
+  animation-delay: 0s;
+}
+
+.floating-icon-2 {
+  top: 30%;
+  right: 18%;
+  animation-delay: 1s;
+}
+
+.floating-icon-3 {
+  bottom: 22%;
+  left: 22%;
+  animation-delay: 2s;
+}
+
+@media (max-width: 768px) {
+  .reports-container {
+    padding: 1rem;
+  }
+  
+  .report-controls {
+    grid-template-columns: 1fr;
+  }
+  
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .export-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .export-btn {
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .report-floating-element {
+    font-size: 1.5rem;
+  }
+}
